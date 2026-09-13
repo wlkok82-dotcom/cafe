@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wiu Kafei — Order Online</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo" id="logoText">Wiu Kafei</div>
+      <nav class="header-nav">
+        <button class="nav-link" data-scroll="menu">Menu</button>
+        <button class="nav-link" data-scroll="tracking">Track Order</button>
+      </nav>
+      <button class="cart-btn" id="openCartBtn" aria-label="Open cart">
+        🛍️ <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <h1 id="heroHeading">Bottled Coffee, Made Fresh</h1>
+    <p id="heroSub">Order your favourite blend for delivery or self-pickup.</p>
+  </section>
+
+  <!-- ===================== MENU / CATEGORIES ===================== -->
+  <section class="menu-section" id="menu">
+    <div class="category-tabs" id="categoryTabs"></div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+
+  <!-- ===================== ORDER TRACKING ===================== -->
+  <section class="tracking-section" id="tracking">
+    <h2>Track Your Order</h2>
+    <p class="tracking-hint">Enter the order number you received after checkout (e.g. #001).</p>
+    <div class="tracking-form">
+      <input type="text" id="trackingInput" placeholder="#001" />
+      <button id="trackBtn" class="btn btn-primary">Check Status</button>
+    </div>
+    <div id="trackingResult" class="tracking-result"></div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <p id="footerBusinessName">Wiu Kafei</p>
+    <p id="footerHours"></p>
+    <p id="footerLocation"></p>
+  </footer>
+
+  <!-- ===================== CART DRAWER ===================== -->
+  <div class="overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h2>Your Cart</h2>
+      <button class="close-btn" id="closeCartBtn" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="cartTotal">RM0.00</span>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn" disabled>Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ===================== CHECKOUT MODAL ===================== -->
+  <div class="overlay" id="checkoutOverlay"></div>
+  <div class="modal" id="checkoutModal">
+    <div class="modal-header">
+      <h2>Checkout</h2>
+      <button class="close-btn" id="closeCheckoutBtn" aria-label="Close checkout">✕</button>
+    </div>
+    <form id="checkoutForm" class="modal-body">
+      <label>
+        Full Name
+        <input type="text" id="custName" required placeholder="Your name" />
+      </label>
+      <label>
+        Contact Number
+        <input type="tel" id="custContact" required placeholder="e.g. 012-3456789" />
+      </label>
+      <label>
+        Order Type
+        <select id="orderType" required></select>
+      </label>
+      <label>
+        Payment Method
+        <select id="paymentMethod" required></select>
+      </label>
+
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div id="summaryItems"></div>
+        <div class="summary-total-row">
+          <span>Total</span>
+          <span id="summaryTotal">RM0.00</span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Confirm Order</button>
+    </form>
+  </div>
+
+  <!-- ===================== ORDER CONFIRMATION MODAL ===================== -->
+  <div class="overlay" id="confirmOverlay"></div>
+  <div class="modal modal-small" id="confirmModal">
+    <div class="modal-body confirm-body">
+      <div class="confirm-icon">✅</div>
+      <h2>Order Placed!</h2>
+      <p>Thank you, <span id="confirmName"></span>! Your order number is:</p>
+      <div class="order-number" id="confirmOrderNumber">#000</div>
+      <p class="confirm-status">Status: <strong>NEW</strong></p>
+      <p class="confirm-hint">Save this number to track your order status.</p>
+      <button class="btn btn-primary btn-block" id="confirmCloseBtn">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="orders.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

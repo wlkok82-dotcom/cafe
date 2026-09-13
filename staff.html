@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wiu Kafei — Staff</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="staff-body">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo" id="staffLogoText">Wiu Kafei — Staff</div>
+      <button class="btn btn-logout" id="logoutBtn" hidden>Logout</button>
+    </div>
+  </header>
+
+  <!-- ===================== LOGIN SCREEN ===================== -->
+  <section class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="login-icon">🔒</div>
+      <h1>Staff Login</h1>
+      <p class="login-hint">Enter the staff PIN to open the order board.</p>
+      <form id="loginForm">
+        <input type="password" inputmode="numeric" id="pinInput" placeholder="Enter PIN" autocomplete="off" />
+        <button type="submit" class="btn btn-primary btn-block">Unlock</button>
+      </form>
+      <p class="login-error" id="loginError" hidden>Incorrect PIN</p>
+    </div>
+  </section>
+
+  <!-- ===================== STAFF ORDER BOARD ===================== -->
+  <section class="staff-board" id="staffBoard" hidden>
+    <div class="board-toolbar">
+      <h1>Order Board</h1>
+      <p class="board-hint">Orders update live as customers place them. Move each order forward as it's prepared.</p>
+    </div>
+    <div class="board-columns" id="boardColumns"><!-- rendered by staff.js --></div>
+  </section>
+
+  <script src="content.js"></script>
+  <script src="orders.js"></script>
+  <script src="staff.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 300 225">
+  <rect width="300" height="225" fill="#4a2e1c"/>
+  <g opacity="0.9">
+    <rect x="128" y="55" width="44" height="90" rx="10" fill="#faf3e9" opacity="0.15"/>
+    <rect x="138" y="40" width="24" height="18" rx="4" fill="#faf3e9" opacity="0.15"/>
+    <ellipse cx="150" cy="150" rx="26" ry="8" fill="#000" opacity="0.08"/>
+  </g>
+  <text x="150" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="34" text-anchor="middle">☕</text>
+  <text x="150" y="200" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#faf3e9" text-anchor="middle">Wiu Original</text>
+<text x="150" y="222" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#faf3e9" text-anchor="middle">Black</text>
+
+</svg>
