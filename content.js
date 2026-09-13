@@ -47,7 +47,7 @@ const PRODUCTS = [
     name: "Wiu Long Black",
     description: "Extra bold double-shot black coffee for a strong pick-me-up.",
     price: 7.00,
-    image: "images/products/long-black.svg",
+    image: "Img/OIP.png",
   },
   {
     id: "espresso-shot",
