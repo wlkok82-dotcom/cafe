@@ -91,7 +91,7 @@ const PRODUCTS = [
     name: "Wiu Hazelnut Dream",
     description: "Roasted hazelnut flavoured coffee with a nutty finish.",
     price: 8.50,
-    image: "images/products/hazelnut-dream.svg",
+    image: "Img/OIP.webp",
   },
   {
     id: "caramel-swirl",
