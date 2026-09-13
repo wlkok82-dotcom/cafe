@@ -39,7 +39,7 @@ const PRODUCTS = [
     name: "Wiu Original Black",
     description: "Classic single-origin black coffee, bold and unsweetened.",
     price: 6.00,
-    image: "images/products/original-black.svg",
+    image: "Img/OIPjpg ",
   },
   {
     id: "long-black",
